@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+         colors="true"
+         verbose="true"
+         stopOnFailure="false"
+         convertNoticesToExceptions="false">
+    <testsuites>
+        <testsuite name="tests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="API_KEY" value="" force="true" />
+        <env name="COUNTRY_ID" value="" force="true" />
+        <env name="DOCUMENT_ROOT" value="" force="true" />
+    </php>
+</phpunit>
