@@ -83,7 +83,7 @@ class Warehouse
                 "'" . $warehouse['Longitude'] . "', " .
                 "'" . $warehouse['Latitude'] . "', " .
                 "'" . $warehouse['PostFinance'] . "', " .
-                "'" . implode(";", $warehouse['Schedule']) . "', " .
+                "'" . json_encode($warehouse['Schedule']) . "', " .
                 "'" . $warehouse['Ref'] . "', " .
                 "'" . date("Y-m-d H:m:s") . "', " .
                 "'" . $warehouse['TypeOfWarehouse'] .
@@ -134,7 +134,7 @@ class Warehouse
 
         foreach ($existingWarehouses as $ref => $existingWarehouse){
             if(!$warehouses[$ref]){
-               $this->deleteWarehouse($existingWarehouse['Id']);
+                $this->deleteWarehouse($existingWarehouse['Id']);
             }
         }
     }
@@ -181,7 +181,7 @@ class Warehouse
             Longitude='".$warehouse['Longitude']."',
             Latitude='".$warehouse['Latitude']."',
             PostFinance='".$warehouse['PostFinance']."',
-            Schedule='".implode(";", $warehouse['Schedule']) ."',
+            Schedule='".json_encode($warehouse['Schedule']) ."',
             Ref='".$warehouse['Ref']."',
             DateUpdate='".date("Y-m-d H:m:s")."',
             TypeOfWarehouse='".$warehouse['TypeOfWarehouse']."'
