@@ -9,7 +9,7 @@ Bitrix CMS с установленным модулем Интернет-маг�
 
 ## Установка
 
-- `composer create-project --prefer-dist konopden/bitrix-np-import`
+- `composer require konopden/bitrix-np-import`
 
 ## Примеры
 
@@ -48,7 +48,6 @@ use BitrixNovaPoshta\Location;
 use BitrixNovaPoshta\Warehouse;
 
 $client = new Client(API_KEY);
-$settlements = $client->getSettlements();
 $cities = $client->getCities();
 $areas = $client->getAreas();
 
