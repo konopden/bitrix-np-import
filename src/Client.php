@@ -8,7 +8,7 @@ require_once 'HTTP/Request2.php';
 
 class Client
 {
-    const API_BASE_PATH = 'http://api.novaposhta.ua/v2.0/json/';
+    const API_BASE_PATH = 'https://api.novaposhta.ua/v2.0/json/';
     const COUNT_RESPONSE_ELEMENTS = 150;
 
     private $responseData;
