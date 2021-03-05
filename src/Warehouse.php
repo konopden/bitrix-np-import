@@ -172,6 +172,7 @@ class Warehouse
     protected function updateWarehouse($id, $warehouse){
         global $DB;
         $warehouse['Description'] = str_replace("'", "''", $warehouse['Description']);
+        $warehouse['DescriptionRu'] = str_replace("'", "''", $warehouse['DescriptionRu']);
         $res = $DB->Query("UPDATE ".$this-> tableName." SET
             SiteKey='".$warehouse['SiteKey']."',
             CityId='".$warehouse['cityId']."',
