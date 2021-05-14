@@ -5,7 +5,8 @@
     "license": "MIT",
     "type": "library",
     "require": {
-        "pear/http_request2": "^2.3"
+        "pear/http_request2": "2.3",
+		"pear/pear_exception": "1.0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.0"
